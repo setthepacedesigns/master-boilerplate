@@ -1,0 +1,84 @@
+@if $use-template-version == 1 {
+
+  #container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+    "header header header header nav nav nav nav nav nav nav nav"
+    "main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content"
+    "section section section section section section section section section section section section"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+
+    @include smallDevice {
+      grid-template-areas:
+      "header header header header header header header header header header header header"
+      "nav nav nav nav nav nav nav nav nav nav nav nav"
+      "main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content"
+      "section section section section section section section section section section section section"
+      "footer footer footer footer footer footer footer footer footer footer footer footer";
+    }
+
+    > * {
+      padding: 2.5rem;
+      background: #3bbced;
+      text-align: center;
+      font-family: sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+
+      @include smallDevice {
+        padding: 0;
+      }
+    }
+  }
+
+  .header {
+    grid-area: header;
+    grid-row: 1 / 2;
+     /* autoprefixer: off */
+
+    @include smallDevice {
+      grid-row: 1 / 1;
+       /* autoprefixer: off */
+    }
+  }
+
+  .nav {
+    grid-area: nav;
+    grid-row: 1 / 2;
+     /* autoprefixer: off */
+
+    @include smallDevice {
+      grid-row: 2 / 2;
+       /* autoprefixer: off */
+    }
+  }
+
+  .main-content {
+    grid-area: main-content;
+    grid-row: 2 / 7;
+     /* autoprefixer: off */
+
+    @include smallDevice {
+      grid-row: 3 / 7;
+       /* autoprefixer: off */
+    }
+  }
+
+  .section {
+    grid-area: section;
+    grid-row: 7 / 10;
+     /* autoprefixer: off */
+  }
+
+  .footer {
+    grid-area: footer;
+    grid-row: 10 / 13;
+     /* autoprefixer: off */
+  }
+
+}

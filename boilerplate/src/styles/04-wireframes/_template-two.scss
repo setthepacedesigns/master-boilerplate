@@ -1,0 +1,71 @@
+@if $use-template-version == 2 {
+
+  #container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+    "header header header header header header header header header header nav nav"
+    "section section section main-content main-content main-content main-content main-content main-content main-content main-content main-content"
+    "section section section main-content main-content main-content main-content main-content main-content main-content main-content main-content"
+    "section section section footer footer footer footer footer footer footer footer footer";
+
+    @include mediumDown {
+      grid-template-areas:
+      "header header header header header header header header header header nav nav"
+      "section section section section section section section section section section section section"
+      "main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content"
+      "footer footer footer footer footer footer footer footer footer footer footer footer";
+    }
+
+    > * {
+      background: #3bbced;
+      padding: 2.5rem;
+      text-align: center;
+      font-family: sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+
+      @include mediumDown {
+        padding: 0;
+      }
+    }
+  }
+
+  .header {
+    grid-area: header;
+    grid-row: 1 / 2;
+  }
+
+  .nav {
+    grid-area: nav;
+    grid-row: 1 / 2;
+  }
+
+  .main-content {
+    grid-area: main-content;
+    grid-row: 2 / 10;
+
+    @include mediumDown {
+      grid-row: 5 / 10;
+    }
+  }
+
+  .section {
+    grid-area: section;
+    grid-row: 2 / 13;
+
+    @include mediumDown {
+      grid-row: 2 / 5;
+    }
+  }
+
+  .footer {
+    grid-area: footer;
+    grid-row: 10 / 13;
+  }
+
+}
