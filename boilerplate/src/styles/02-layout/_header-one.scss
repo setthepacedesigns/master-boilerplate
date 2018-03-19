@@ -1,3 +1,36 @@
 @if $use-header-version == 1 {
 
+  .nav__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: $grey;
+  }
+
+  .nav__link {
+    display: block;
+    text-decoration: none;
+    color: $white;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      background: $black;
+    }
+  }
+
+  // Single Level Menu
+
+  @include mediumUp {
+    .nav__list--single {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .nav__item--single {
+      flex: 1 0 auto;
+      text-align: center;
+    }
+  }
+
 }

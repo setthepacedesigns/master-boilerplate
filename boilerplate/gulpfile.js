@@ -483,3 +483,10 @@
             gulp.start('svg-images');
             gulp.start('svg-sprite');
         });
+
+        // // Add Full Page JS files to dist folder from node modules
+        // gulp.task('fullPage', ['default'], function() {
+        //     gulp.src(['node_modules/fullpage.js/dist/jquery.fullpage.min.js'])
+        //         .pipe(notify({ message: 'Node scripts task complete' }))
+        //         .pipe(gulp.dest('../dist/js'));
+        // });

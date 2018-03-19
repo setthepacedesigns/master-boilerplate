@@ -6,7 +6,7 @@
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(50px, auto);
     grid-template-areas:
     "header header header header nav nav nav nav nav nav nav nav"
     "main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content"
@@ -23,8 +23,9 @@
     }
 
     > * {
-      padding: 2.5rem;
-      background: #3bbced;
+      padding: 1rem;
+      background: $white;
+      border: 1px dashed $grey;
       text-align: center;
       font-family: sans-serif;
       font-weight: 700;
@@ -38,7 +39,7 @@
 
   .header {
     grid-area: header;
-    grid-row: 1 / 2;
+    grid-row: 1 / 1;
      /* autoprefixer: off */
 
     @include smallDevice {
@@ -49,7 +50,7 @@
 
   .nav {
     grid-area: nav;
-    grid-row: 1 / 2;
+    grid-row: 1 / 1;
      /* autoprefixer: off */
 
     @include smallDevice {
