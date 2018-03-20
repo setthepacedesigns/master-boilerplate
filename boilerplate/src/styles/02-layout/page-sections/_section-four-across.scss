@@ -1,0 +1,10 @@
+.section-four-across {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  grid-gap: 1%;
+
+  @include smallDevice {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

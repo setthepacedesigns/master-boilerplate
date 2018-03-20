@@ -28,8 +28,8 @@
             svgstore       =    require('gulp-svgstore'),           // SVG Sprite
             concat         =    require('gulp-concat'),             // Concatenate files
             jshint         =    require('gulp-jshint'),             // Javascript linter
-            pixrem         =    require('pixrem')                   // Convert new units to px for older browsers
-            babel          =    require('gulp-babel')               // Include bable to compile ES6
+            pixrem         =    require('pixrem'),                   // Convert new units to px for older browsers
+            babel          =    require('gulp-babel'),               // Include babel to compile ES6
             browserSync    =    require('browser-sync').create();   // Include browsersync
         ;
 

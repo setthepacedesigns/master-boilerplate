@@ -1,0 +1,10 @@
+.section-three-across {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   height: 100%;
+   grid-gap: 1%;
+
+   @include smallDevice {
+     grid-template-columns: repeat(1, 1fr);
+   }
+ }

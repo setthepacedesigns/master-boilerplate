@@ -2,6 +2,7 @@
 
   #container {
     max-width: 1440px;
+    overflow-x: hidden;
     margin: 0 auto;
     display: grid;
     grid-gap: 1rem;
@@ -68,6 +69,11 @@
       grid-row: 3 / 7;
        /* autoprefixer: off */
     }
+  }
+
+  .box-test {
+    background: $black;
+    color: $white;
   }
 
   .section {

@@ -3,7 +3,10 @@
 @import "01-base/variables";
 @import "01-base/mixin";
 @import "01-base/global";
-@import "02-layout/header-one";
-@import "03-modules/aos";
+@import "02-layout/headers/header-one";
+@import "02-layout/page-sections/section-one-across";
+@import "02-layout/page-sections/section-two-across";
+@import "02-layout/page-sections/section-three-across";
+@import "02-layout/page-sections/section-four-across";
 @import "04-wireframes/template-one";
 @import "04-wireframes/template-two";
